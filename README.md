@@ -1,2 +1,12 @@
 # Walle.SSO
-Walle SSO , 兼容移动端，微信端，桌面客户端的单点登录解决方案。
+
+Walle SSO Platform helps a group of project use single login.
+
+## Develop
+
+```
+npm install
+dotnet restore
+webpack -w
+dotnet run
+```
