@@ -15,34 +15,26 @@ namespace Walle.SSO.Business
 
         public bool SignOutToken(string token)
         {
-            var users = Context<WalleUser>().Query(p => p.AccessToken == token);
-            if (users.HasAny())
+            var usertokens = Context<WalleUserToken>().Query(p => p.AccessToken == token);
+            if (usertokens.HasAny())
             {
-                var usr = users.First();
-                usr.AccessToken = string.Empty;
-               
-            }
-            else
-            {
-                return null;
+                var usertoken = usertokens.First();
+                var result = Context<WalleUserToken>().Delete(usertoken.Id);
+                return result;
             }
             return false;
         }
 
         public WalleUser GetUserInfo(string token)
         {
-            var users = Context<WalleUser>().Query(p => p.AccessToken == token);
-            if (users.HasAny())
+            var usertokens = Context<WalleUserToken>().Query(p => p.AccessToken == token);
+            if (usertokens.HasAny())
             {
-                var usr = users.First();
-                usr.Password = string.Empty;
-                usr.Dept = Context<WalleDept>().GetById(usr.DeptId);
-                return usr;
+                var usertoken = usertokens.First();
+                var user = Context<WalleUser>().GetById(usertoken.UserId);
+                return user;
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Walle.SSO.Core.Domains
 {
     public class WalleUserToken : Domain
     {
+        public string UserId {get;set;} = string.Empty;
         public string AccessToken { get; set; } = string.Empty;
         public DateTime Expire { get; set; } = DateTimeValue.Default;
     }
