@@ -1,0 +1,3 @@
+D:\github\Walle.SSO\Walle.SSO.Business\obj\Debug\netstandard2.0\Walle.SSO.Business.csproj.CoreCompileInputs.cache
+D:\github\Walle.SSO\Walle.SSO.Business\obj\Debug\netstandard2.0\Walle.SSO.Business.AssemblyInfoInputs.cache
+D:\github\Walle.SSO\Walle.SSO.Business\obj\Debug\netstandard2.0\Walle.SSO.Business.AssemblyInfo.cs

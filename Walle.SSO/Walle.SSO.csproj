@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Walle.Components.Mongo\Walle.Components.Mongo.csproj" />
+    <ProjectReference Include="..\Walle.Components\Walle.Components.csproj" />
+    <ProjectReference Include="..\Walle.SSO.Business\Walle.SSO.Business.csproj" />
+    <ProjectReference Include="..\Walle.SSO.Core\Walle.SSO.Core.csproj" />
+    <ProjectReference Include="..\Walle.SSO.Dal\Walle.SSO.Dal.csproj" />
+  </ItemGroup>
+</Project>
